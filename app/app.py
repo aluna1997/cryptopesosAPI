@@ -1,12 +1,14 @@
 from loguru import logger
 from flask import Flask
 from flask import jsonify
-from cryptopesosAPI.app.common.constantes import RUTA_ARCHIVO_LOG
-from cryptopesosAPI.app.business.llamaAPIGeckoBussines import obtener_informacion_lista_completa_activos
-from cryptopesosAPI.app.business.llamaAPIGeckoBussines import obtener_informacion_tendencias
+#from cryptopesosAPI.app.common.constantes import RUTA_ARCHIVO_LOG
+#from cryptopesosAPI.app.business.llamaAPIGeckoBussines import obtener_informacion_lista_completa_activos
+#from cryptopesosAPI.app.business.llamaAPIGeckoBussines import obtener_informacion_tendencias
+
+from llamaAPIGeckoBussines import obtener_informacion_tendencias,obtener_informacion_lista_completa_activos
 app = Flask(__name__)
 
-logger.add(RUTA_ARCHIVO_LOG)
+#logger.add(RUTA_ARCHIVO_LOG)
 
 @app.route('/precios/', methods=['GET'])
 def obtener_info_precios():
