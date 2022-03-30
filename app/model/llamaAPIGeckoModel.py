@@ -5,7 +5,7 @@ import base64
 from flask import request
 from loguru import logger
 from pycoingecko import CoinGeckoAPI
-from cryptopesosAPI.common.constantes import IMG_LOGO_DEFAULT, RUTA_ARCHIVO_LOG
+from cryptopesosAPI.app.common.constantes import IMG_LOGO_DEFAULT, RUTA_ARCHIVO_LOG
 
 logger.add(RUTA_ARCHIVO_LOG)
 
