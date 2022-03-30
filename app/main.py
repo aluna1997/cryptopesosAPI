@@ -1,8 +1,3 @@
-import sys
-import pathlib
-aux_path = str(pathlib.Path().resolve()).replace("app/main.py","")
-sys.path.append(aux_path)
-
 from loguru import logger
 from flask import Flask
 from flask import jsonify
