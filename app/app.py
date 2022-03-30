@@ -24,4 +24,6 @@ def obtener_info_tendencias():
     resultado.headers.add('Access-Control-Allow-Origin', '*')
     return resultado
 
+if __name__ == "__main__":
+    app.run()
    
