@@ -7,10 +7,10 @@ plt.switch_backend('Agg')
 
 from datetime import date, datetime
 from loguru import logger
-from cryptopesosAPI.app.model.llamaAPIGeckoModel import obtener_lista_completa_ids_logos_activos
-from cryptopesosAPI.app.model.llamaAPIGeckoModel import obtener_lista_completa_activos_model, obtener_grafica_historica
-from cryptopesosAPI.app.model.llamaAPIGeckoModel import obtener_precios_activos,obtener_tendencias_actuales
-from cryptopesosAPI.app.common.constantes import LISTA_ACTIVOS_PERMITIDOS, RUTA_ARCHIVO_LOG
+from app.model.llamaAPIGeckoModel import obtener_lista_completa_ids_logos_activos
+from app.model.llamaAPIGeckoModel import obtener_lista_completa_activos_model, obtener_grafica_historica
+from app.model.llamaAPIGeckoModel import obtener_precios_activos,obtener_tendencias_actuales
+from app.common.constantes import LISTA_ACTIVOS_PERMITIDOS, RUTA_ARCHIVO_LOG
 
 logger.add(RUTA_ARCHIVO_LOG)
 
