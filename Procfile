@@ -1,1 +1,1 @@
-web: gunicorn wsgi:cryptopesosAPI
+web: gunicorn wsgi:app
