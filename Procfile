@@ -1,1 +1,1 @@
-web: gunicorn cryptopesosAPI.wsgi
+web: gunicorn wsgi:app
