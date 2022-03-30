@@ -1,6 +1,7 @@
 import pickle
 import base64
 import os
+import pathlib
 import matplotlib.pyplot as plt
 plt.switch_backend('Agg') 
 
@@ -62,8 +63,8 @@ def crea_grafica_b64(id_activo_gecko):
 
 def obtener_informacion_lista_completa_activos():
     resultado = []
-
-    with open("../../lista_ids_coin_market_cap.pickle", "rb") as f:
+    aux_dir = str(pathlib.Path().resolve())
+    with open(aux_dir + "/app/business/lista_ids_coin_market_cap.pickle", "rb") as f:
         ids_activos_marketcap = pickle.load(f)
 
     aux_acrivos_permitidos = {}
