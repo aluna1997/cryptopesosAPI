@@ -63,7 +63,7 @@ def crea_grafica_b64(id_activo_gecko):
 def obtener_informacion_lista_completa_activos():
     resultado = []
 
-    with open("./lista_ids_coin_market_cap.pickle", "rb") as f:
+    with open("../../lista_ids_coin_market_cap.pickle", "rb") as f:
         ids_activos_marketcap = pickle.load(f)
 
     aux_acrivos_permitidos = {}
