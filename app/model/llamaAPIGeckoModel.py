@@ -10,6 +10,10 @@ from app.common.constantes import IMG_LOGO_DEFAULT, RUTA_ARCHIVO_LOG
 logger.add(RUTA_ARCHIVO_LOG)
 
 def obtener_lista_completa_activos_model():
+    """
+    Función que obtiene la lita completa de activos soportados por 
+    CoinGecko
+    """
     coins = []
    
     # Instancia de objeto coin gecko que nos ayuda a llamar al API oficial
@@ -18,6 +22,8 @@ def obtener_lista_completa_activos_model():
     logger.info("Obteniendo lista completa de activos")
    
     try:
+        # Función que ontiene la lista completa de los activos soportados por
+        # CoinGecko
         coins = cg.get_coins_list()
     except Exception as err:
         logger.error("Ocurrio un error al obtener la lista completa de activos {}".format(str(err)))
@@ -25,6 +31,9 @@ def obtener_lista_completa_activos_model():
     return coins
 
 def obtener_lista_completa_ids_logos_activos():
+    """
+    Función que obtiene la lista completa de ids de las monedas de CoinMarketCapAPI
+    """
     data_id_map = []
     cmc = coinmarketcapapi.CoinMarketCapAPI()
     logger.info("Coinsultando al API oficial de coin marketcap")
